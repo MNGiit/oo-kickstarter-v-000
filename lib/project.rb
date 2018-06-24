@@ -8,6 +8,7 @@ class Project
   end
   
   def add_backer (backer)
+    find_backed_projects(backer)
     @backers << backer
     #backer.back_project(self) if backer.backed_projects.title.include?(@title) == false
   end
