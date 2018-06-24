@@ -1,3 +1,4 @@
+require 'pry'
 class Project
   attr_reader :title, :backers
   
@@ -8,10 +9,11 @@ class Project
   
   def add_backer (backer)
     @backers << backer
-    backer.back_project(self) if backer.backed_projects.title.include?(@title) == false
+    #backer.back_project(self) if backer.backed_projects.title.include?(@title) == false
   end
   
   def find_backed_projects (backer)
-    projects_list = 
-  
+    projects_list = backer.backed_projects
+    binding.pry
+  end
 end
