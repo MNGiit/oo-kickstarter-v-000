@@ -13,7 +13,7 @@ class Project
 
   def backer_not_found?(name)
     list = Backer.all
-    list.name.include?(name) true : false
+    list.name.include?(name)
   end
 
 end
